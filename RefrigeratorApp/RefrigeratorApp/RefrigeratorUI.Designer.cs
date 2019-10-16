@@ -162,9 +162,9 @@
             // 
             // weightShowRichTextBox
             // 
-            this.weightShowRichTextBox.Location = new System.Drawing.Point(213, 208);
+            this.weightShowRichTextBox.Location = new System.Drawing.Point(120, 208);
             this.weightShowRichTextBox.Name = "weightShowRichTextBox";
-            this.weightShowRichTextBox.Size = new System.Drawing.Size(343, 96);
+            this.weightShowRichTextBox.Size = new System.Drawing.Size(532, 96);
             this.weightShowRichTextBox.TabIndex = 3;
             this.weightShowRichTextBox.Text = "";
             // 

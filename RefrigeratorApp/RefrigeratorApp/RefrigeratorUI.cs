@@ -39,14 +39,17 @@ namespace RefrigeratorApp
                 aRefrigerator.Weights.Add(weight);
                 currentWeightTextBox.Text = (aRefrigerator.GetCurrentWeight(totalWeight)).ToString(CultureInfo.InvariantCulture);
                 remainingWeightTextBox.Text = aRefrigerator.GetRemainingWeight().ToString(CultureInfo.CurrentCulture);
-                string message = "\t\tItems \t\t\t Weights\n";
+                string message = "\t\tItems \t\t\t Weights\t\t\t\tTotalWeight\n";
                 int index=0;
                 foreach (double data in aRefrigerator.Weights)
                 {
-                    message += "Number of item : \t" + aRefrigerator.Items[index]+ "\t Weights(per unit) :\t " + data + "\n";
+                    message += "Number of item : \t" + aRefrigerator.Items[index]+ "\t Weights(per unit) :\t " + data + "\t\tTotalWeight :\t"+aRefrigerator.TotalWeights[index]+"\n";
                     index++;
                 }
 
+                message += "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n";
+                message += "Total :\t\t" + aRefrigerator.Items.Sum() + "\t\t\t" + aRefrigerator.Weights.Sum() + "\t\t\t\t" +
+                           aRefrigerator.TotalWeights.Sum();
                 weightShowRichTextBox.Text = message;
             }
             catch (Exception exception)
